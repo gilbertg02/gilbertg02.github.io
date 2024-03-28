@@ -1,0 +1,73 @@
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #e7e7e7;
+}
+
+header {
+    color: black;
+    text-align: center;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 175%;
+}
+
+.contenedor_principal {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.categoria_comida {
+    border: 1px solid black;
+    margin: 20px;
+    padding: 60px 20px 20px;
+    position: relative;
+    background-color: #ffffff;
+    box-sizing: border-box;
+}
+
+.titulo_seccion {
+    position: absolute;
+    top: -20px;
+    right: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 125%;
+    border: 1px solid black;
+    box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+    .contenedor_principal {
+        padding: 10px;
+    }
+    .categoria_comida {
+        width: 100%;
+        margin: 10px 0;
+        padding: 60px 20px 20px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .categoria_comida {
+        width: calc(50% - 40px);
+        margin: 20px;
+    }
+    .categoria_comida:last-child {
+        width: calc(100% - 40px);
+        margin: 20px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .categoria_comida {
+        width: calc(33.333% - 40px);
+        margin: 20px;
+    }
+}
